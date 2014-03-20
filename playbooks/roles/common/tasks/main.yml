@@ -63,7 +63,7 @@
   template: dest=/etc/logrotate.d/hourly/tracking.log src=etc/logrotate.d/hourly/edx_logrotate_tracking_log.j2 owner=root group=root mode=644
 
 - name: Add logrotate for tracking.log to cron.hourly
-  copy: src=logrotate dest=/etc/cron.hourly/logrotate owner=root group=root mode=555
+  copy: src=etc/cron.hourly/logrotate dest=/etc/cron.hourly/logrotate owner=root group=root mode=555
 
 - name: update /etc/hosts
   template: src=hosts.j2 dest=/etc/hosts
